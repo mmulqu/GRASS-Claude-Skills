@@ -11,29 +11,30 @@ This repository contains three comprehensive Claude Code skills that provide com
 
 ### Installing Skills in Claude Desktop
 
-1. **Open Claude Desktop Settings**
-   - Click the settings icon in the bottom-left corner
-   - Navigate to **Skills** in the left sidebar
+1. **Navigate to Settings**
+   - Open **Claude Desktop**
+   - Go to **Settings** → **Capabilities**
 
-2. **Add Skills Directory**
-   - Click **Add Skill** or the **+** button
-   - Browse to this repository location on your computer
-   - Select **each skill folder individually**:
-     - `grass-skill-1-display-general`
-     - `grass-skill-2-raster-database`
-     - `grass-skill-3-vector-imagery`
+2. **Enable Code Execution**
+   - Ensure that **Code execution and file creation** is enabled
+   - This is required for skills to function properly
 
-3. **Enable Skills**
-   - Each skill will appear in your skills list
-   - Toggle them on to activate
+3. **Upload Skills**
+   - Scroll to the **Skills** section
+   - Click **"Upload skill"** button
+   - Upload each ZIP file from this repository:
+     - `grass-skill-1-display-general.zip`
+     - `grass-skill-2-raster-database.zip`
+     - `grass-skill-3-vector-imagery.zip`
 
-4. **Verify Installation**
+4. **Enable Skills**
+   - Each uploaded skill will appear in your skills list
+   - Toggle individual skills on or off as needed
+   - Enable all three GRASS GIS skills
+
+5. **Verify Installation**
    - Type `/skills` in Claude Code to see all installed skills
-   - You should see all three GRASS GIS skills listed
-
-### Alternative: Add All Skills at Once
-
-If your Claude Desktop version supports it, you can add the parent directory and Claude will detect all three skills automatically.
+   - You should see all three GRASS GIS skills listed and enabled
 
 ## What's Included
 
@@ -144,17 +145,17 @@ Each of the 509 tools has complete documentation including:
 
 ### Accessing Tool Documentation
 
-Each skill's `tools/` directory contains individual markdown files:
-- `grass-skill-1-display-general/tools/d.rast.md`
-- `grass-skill-2-raster-database/tools/r.watershed.md`
-- `grass-skill-3-vector-imagery/tools/v.buffer.md`
+Each skill ZIP file contains a `tools/` directory with individual markdown files:
+- `grass-skill-1-display-general.zip` → `tools/d.rast.md`, `tools/g.region.md`, etc.
+- `grass-skill-2-raster-database.zip` → `tools/r.watershed.md`, `tools/r.slope.aspect.md`, etc.
+- `grass-skill-3-vector-imagery.zip` → `tools/v.buffer.md`, `tools/i.vi.md`, etc.
 
 ### Usage Guides
 
-Each skill includes a `USAGE.md` with quick-start examples:
-- `grass-skill-1-display-general/USAGE.md` - Display and temporal workflows
-- `grass-skill-2-raster-database/USAGE.md` - Raster processing workflows
-- `grass-skill-3-vector-imagery/USAGE.md` - Vector and imagery workflows
+Each skill ZIP includes a `USAGE.md` with quick-start examples:
+- Skill 1: Display and temporal workflows
+- Skill 2: Raster processing workflows
+- Skill 3: Vector and imagery workflows
 
 ## Requirements
 
@@ -182,8 +183,8 @@ The `grass.tools` API is the new object-oriented interface for GRASS GIS:
 ## Support
 
 For issues with these skills:
-- Check individual tool documentation in `tools/` directories
-- Refer to `USAGE.md` files for workflow examples
+- Extract the ZIP files to view individual tool documentation in `tools/` directories
+- Refer to `USAGE.md` files inside each ZIP for workflow examples
 - Consult official GRASS documentation for detailed explanations
 
 For GRASS GIS questions:

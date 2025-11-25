@@ -42,13 +42,15 @@ Covers vector operations and remote sensing:
 
 ### Installation in Claude Desktop
 
-1. Open **Claude Desktop** → **Settings** → **Skills**
-2. Click **Add Skill** and select each folder:
-   - `grass-skill-1-display-general`
-   - `grass-skill-2-raster-database`
-   - `grass-skill-3-vector-imagery`
-3. Enable all three skills
-4. Verify with `/skills` command
+1. Navigate to **Settings** → **Capabilities**
+2. Ensure that **Code execution and file creation** is enabled
+3. Scroll to the **Skills** section
+4. Click **"Upload skill"** and upload each ZIP file:
+   - `grass-skill-1-display-general.zip`
+   - `grass-skill-2-raster-database.zip`
+   - `grass-skill-3-vector-imagery.zip`
+5. Toggle each skill on to activate
+6. Verify with `/skills` command
 
 See [`claude.md`](claude.md) for detailed installation instructions.
 
@@ -99,33 +101,18 @@ tools.d_legend(raster='elevation', at='5,50,7,10')
 GRASS-Claude-Skills/
 ├── claude.md                                    # Installation guide
 ├── README.md                                    # This file
-├── grass-skill-1-display-general/
-│   ├── SKILL.md                                 # Skill overview
-│   ├── USAGE.md                                 # Quick start examples
-│   ├── README.md                                # Tool listing
-│   └── tools/                                   # 138 tool docs
-│       ├── d.rast.md
-│       ├── g.region.md
-│       ├── t.rast.series.md
-│       └── ...
-├── grass-skill-2-raster-database/
-│   ├── SKILL.md
-│   ├── USAGE.md
-│   ├── README.md
-│   └── tools/                                   # 190 tool docs
-│       ├── r.slope.aspect.md
-│       ├── r.watershed.md
-│       ├── db.select.md
-│       └── ...
-└── grass-skill-3-vector-imagery/
-    ├── SKILL.md
-    ├── USAGE.md
-    ├── README.md
-    └── tools/                                   # 181 tool docs
-        ├── v.buffer.md
-        ├── v.overlay.md
-        ├── i.vi.md
-        └── ...
+├── grass-skill-1-display-general.zip            # Skill 1 (138 tools)
+├── grass-skill-2-raster-database.zip            # Skill 2 (190 tools)
+└── grass-skill-3-vector-imagery.zip             # Skill 3 (181 tools)
+
+Each ZIP file contains:
+├── SKILL.md                                     # Skill overview
+├── USAGE.md                                     # Quick start examples
+├── README.md                                    # Tool listing
+└── tools/                                       # Tool documentation
+    ├── d.rast.md, g.region.md, t.rast.series.md, ...
+    ├── r.slope.aspect.md, r.watershed.md, db.select.md, ...
+    └── v.buffer.md, v.overlay.md, i.vi.md, ...
 ```
 
 ## Documentation Structure
